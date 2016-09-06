@@ -1,0 +1,13 @@
+{
+  "name": "Todo list",
+  "description": "My first Chrome App.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16":"list.png", "48": "todo_list-48.png" },
+  "minimum_chrome_version":"28"
+}

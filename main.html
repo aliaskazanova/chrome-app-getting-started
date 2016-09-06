@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="w3.css">
+    <script src="angular.min.js"></script>
+  </head>
+  <body data-ng-app="todoapp" data-ng-csp="">
+    <header class="w3-container w3-teal w3-padding-16"><h4>ToDo List</h4></header>
+    <div data-ng-controller="todoctrl" class="w3-container "> 
+      <ul class="w3-ul">
+        <li data-ng-repeat="item in listItems" class="w3-padding-16">{{item}} 
+          <span ng-click="remove($index)" style="cursor:pointer;" class="w3-right w3-margin-right">&times;</span>
+        </li>
+      </ul>
+      <form ng-submit="add()" class="w3-container w3-light-grey w3-padding-8">
+        <div class="w3-row w3-margin-top">
+          <div class="w3-col s10">
+            <input data-ng-model="Items" class="w3-input w3-border w3-padding w3-round">
+          </div>
+          <div class="w3-col s2">
+            <input type="submit" value="add" class="w3-btn w3-padding w3-green w3-round">
+          </div>
+        </div>
+      </form>
+      <div id="state" class="w3-padding-left w3-text-red">{{state}}</div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
